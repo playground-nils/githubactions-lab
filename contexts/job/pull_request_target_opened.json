@@ -1,4 +1,8 @@
 {
-  "check_run_id": 69464335629,
+  "check_run_id": 74046543509,
+  "workflow_ref": "playground-nils/githubactions-lab/.github/workflows/_reusable-dump-context.yaml@refs/heads/main",
+  "workflow_sha": "ecf3e596c4b26666c78346acc20e44de5b31ecbe",
+  "workflow_repository": "playground-nils/githubactions-lab",
+  "workflow_file_path": ".github/workflows/_reusable-dump-context.yaml",
   "status": "success"
 }
