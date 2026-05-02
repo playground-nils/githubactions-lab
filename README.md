@@ -2271,26 +2271,26 @@ To skip jobs from forks but run them on your own PRs or pushes, use `if` conditi
 # .github/workflows/skip-pr-from-fork.yaml
 
 name: skip pr from fork
-on:
+'on':
   push:
-    branches: ["main"]
+    branches:
+    - main
   pull_request:
-    branches: ["main"]
+    branches:
+    - main
     types:
-      - opened
-      - synchronize
-
+    - opened
+    - synchronize
 jobs:
   build:
-    # push & my repo will trigger
-    # pull_request on my repo will trigger
-    if: ${{ (github.event_name == 'push' && github.repository_owner == 'guitarrapc') || startsWith(github.event.pull_request.head.label, 'guitarrapc:') }}
+    if: ${{ (github.event_name == 'push' && github.repository_owner == 'playground-nils')
+      || startsWith(github.event.pull_request.head.label, 'guitarrapc:') }}
     permissions:
       contents: read
     runs-on: ubuntu-24.04
     timeout-minutes: 3
     steps:
-      - run: echo build
+    - run: echo build
 
 ```
 
